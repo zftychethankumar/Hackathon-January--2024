@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5</title>
+</head>
+<body>
+    <center>
+        <h1>Write a program to check repeated character in given string or not?</h1>
+    </center>
+    <hr>
+  <script>
+    function hasRepeatedCharacters(str) {
+      const charMap = new Map();
+
+      for (let char of str) {
+        if (charMap.has(char)) {
+          
+          return true;
+        }
+       
+        charMap.set(char, true);
+      }
+
+      
+      return false;
+    }
+
+    function checkRepeatedCharacters() {
+      const inputString = prompt("Enter a string to check for repeated characters:");
+
+      if (hasRepeatedCharacters(inputString)) {
+        alert(`"${inputString}" has repeated characters.`);
+      } else {
+        alert(`"${inputString}" does not have repeated characters.`);
+      }
+    }
+
+    
+  </script>
+  <button onclick="checkRepeatedCharacters()">Check Repeated Characters</button>
+</body>
+</html>

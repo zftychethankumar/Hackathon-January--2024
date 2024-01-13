@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <center>
+        <h1>write a program to segregate the 0's and 1's in a given array?</h1>
+    </center>
+    <hr>
+    <script>
+        function segregateZerosOnes(arr) {
+    let countZeros = 0;
+
+  
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            countZeros++;
+        }
+    }
+
+    // Fill the array with zeros first, followed by ones
+    for (let i = 0; i < arr.length; i++) {
+        if (i < countZeros) {
+            arr[i] = 0;
+        } else {
+            arr[i] = 1;
+        }
+    }
+
+    return arr;
+}
+
+
+const inputArray = [0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 1];
+const resultArray = segregateZerosOnes(inputArray);
+console.log("Segregated array:", resultArray);
+
+    </script>
+</body>
+</html>

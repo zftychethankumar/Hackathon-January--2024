@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <center>
+        <h1>Write a program to get the maximum count of consecutive 1's in a given array ?</h1>
+    </center>
+    <hr>
+    <script>
+        function maxConsecutiveOnes(arr) {
+    let maxCount = 0;
+    let currentCount = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 1) {
+            
+            currentCount++;
+        } else {
+            maxCount = Math.max(maxCount, currentCount);
+            currentCount = 0;
+        }
+    }
+    maxCount = Math.max(maxCount, currentCount);
+
+    return maxCount;
+}
+const inputArray = [0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 0, 1];
+const result = maxConsecutiveOnes(inputArray);
+console.log("Maximum count of consecutive 1's:", result);
+
+    </script>
+</body>
+</html>

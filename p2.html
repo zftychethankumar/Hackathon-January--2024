@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+    <center>
+        <h1>Write a program to check the given string i s Palindrome or Not? a. malayalam b. english</h1>
+    </center>
+    <hr>
+    
+  <script>
+    function isPalindrome(str) {
+  
+  const cleanStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+
+ 
+  return cleanStr === cleanStr.split('').reverse().join('');
+}
+
+
+const stringA = "malayalam";
+const stringB = "english";
+
+if (isPalindrome(stringA)) {
+  console.log(`"${stringA}" is a palindrome.`);
+} else {
+  console.log(`"${stringA}" is not a palindrome.`);
+}
+
+if (isPalindrome(stringB)) {
+  console.log(`"${stringB}" is a palindrome.`);
+} else {
+  console.log(`"${stringB}" is not a palindrome.`);
+}
+  </script>
+
+</body>
+</html>
